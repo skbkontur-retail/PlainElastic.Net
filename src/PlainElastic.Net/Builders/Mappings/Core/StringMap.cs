@@ -29,6 +29,7 @@ namespace PlainElastic.Net.Mappings
         /// <summary>
         /// Defines if term freq and positions should be omitted.
         /// </summary>
+        [Obsolete]
         public StringMap<T> OmitTermFreqAndPositions(bool omitTermFreqAndPositions = false)
         {
             RegisterCustomJsonMap("'omit_term_freq_and_positions': {0}", omitTermFreqAndPositions.AsString());
@@ -101,6 +102,15 @@ namespace PlainElastic.Net.Mappings
         /// The fields options allows to map several core types fields into a single json source field
         /// </summary>
         public virtual StringMap<T> Fields(Func<CoreFields<StringMap<T>>, CoreFields<StringMap<T>>> fields)
+        {
+            RegisterMapAsJson(fields);
+            return this;
+        }
+        
+        /// <summary>
+        /// The fields options allows to map several core types fields into a single json source field
+        /// </summary>
+        public virtual StringMap<T> Norms(Func<FieldNorms, FieldNorms> fields)
         {
             RegisterMapAsJson(fields);
             return this;
