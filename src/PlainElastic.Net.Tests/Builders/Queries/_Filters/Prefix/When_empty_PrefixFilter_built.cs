@@ -8,7 +8,7 @@ namespace PlainElastic.Net.Tests.Builders.Queries
     {
         Because of = () => result = new PrefixFilter<FieldsTestClass>()
                                                 .Field(f => f.StringProperty)
-                                                .Prefix("")
+                                                .Value("")
                                                 .Cache(true)
                                                 .CacheKey("CacheKey")
                                                 .Name("FilterName")
