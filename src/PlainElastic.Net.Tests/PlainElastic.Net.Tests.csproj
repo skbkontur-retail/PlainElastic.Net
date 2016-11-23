@@ -478,7 +478,9 @@
     <Compile Include="Utils\When_Format_with_empty_args_called.cs" />
     <Compile Include="Utils\When_Format_with_non_empty_args_called.cs" />
     <Compile Include="Utils\When_Format_with_null_args_called.cs" />
+    <Compile Include="_NunitTests\MappingTest.cs" />
     <Compile Include="_NunitTests\PrefixFilterTest.cs" />
+    <Compile Include="_NunitTests\X.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
